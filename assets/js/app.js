@@ -137,6 +137,44 @@
     );
   }
 
+  /** True when the query is naming a card product, not just a merchant/category chip. */
+  function isStrongCardNameQuery(query, card) {
+    if (!card) return false;
+    const q = normQ(query);
+    const short = normQ(card.shortName);
+    const name = normQ(card.name);
+    const idWords = normQ(String(card.id || "").replace(/-/g, " "));
+    if (!q || q.length < 3) return false;
+    if (q === short || q === name || q === idWords) return true;
+    const chipish = new Set(
+      [...PRIMARY_CHIPS, ...MORE_CHIPS].map((s) => normQ(s))
+    );
+    if (chipish.has(q)) return false;
+    if (q.split(" ").length >= 2 && (short.includes(q) || name.includes(q) || q.includes(short))) {
+      return true;
+    }
+    // Distinctive single token (e.g. "millennia", "octane") — not a short merchant word
+    if (q.length >= 5 && (short.includes(q) || name.includes(q))) return true;
+    return false;
+  }
+
+  function cardNameSearchHit(query) {
+    const card = findCatalogCard(query);
+    if (!isStrongCardNameQuery(query, card)) return null;
+    const offer =
+      (card.offers || []).find((o) => o && o.tier === "high" && o.rateValue != null) ||
+      (card.offers || []).find((o) => o && o.rateValue != null) ||
+      (card.offers || [])[0];
+    if (!offer) return null;
+    return {
+      card,
+      offer,
+      score: 1e6,
+      isMine: myIds().includes(card.id),
+      matchedLabels: ["Card name"],
+    };
+  }
+
   function myIds() {
     return window.CardWiseWallet ? window.CardWiseWallet.list() : [];
   }
@@ -523,8 +561,20 @@
             onlyMine: onlyMineEl && onlyMineEl.checked,
             myCardIds: myIds(),
           });
-    const { category, results } = packed;
+    let { category, results } = packed;
     const unclear = packed.unclear || [];
+
+    const nameHit =
+      queries.length === 1 && !(onlyMineEl && onlyMineEl.checked)
+        ? cardNameSearchHit(queries[0])
+        : null;
+    if (nameHit) {
+      const rest = (results || []).filter((r) => r.card && r.card.id !== nameHit.card.id);
+      results = [nameHit, ...rest];
+      if (!category) {
+        category = { id: "_card", label: nameHit.card.shortName };
+      }
+    }
 
     catalogBlock.hidden = true;
     rankBlock.hidden = false;
