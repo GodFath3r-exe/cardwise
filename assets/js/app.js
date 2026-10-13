@@ -126,35 +126,66 @@
       .trim();
   }
 
+  /** "one card" / "OneCard" / "one-card" → "onecard" for fuzzy name match. */
+  function compactQ(s) {
+    return normQ(s).replace(/\s+/g, "");
+  }
+
+  function cardNameKeys(card) {
+    const idSpaced = String(card.id || "").replace(/-/g, " ");
+    const spaced = [card.id, card.shortName, card.name, idSpaced].map(normQ).filter(Boolean);
+    const compact = spaced.map((n) => n.replace(/\s+/g, ""));
+    return { spaced: Array.from(new Set(spaced)), compact: Array.from(new Set(compact)) };
+  }
+
   function findCatalogCard(query) {
     const q = normQ(query);
+    const qc = compactQ(query);
     if (!q || q.length < 2) return null;
-    return (
-      cards().find((c) => {
-        const names = [c.id, c.shortName, c.name, c.bank].map(normQ);
-        return names.some((n) => n === q || n.includes(q) || q.includes(n));
-      }) || null
-    );
+
+    let best = null;
+    let bestScore = 0;
+    cards().forEach((c) => {
+      const keys = cardNameKeys(c);
+      let score = 0;
+      keys.spaced.forEach((n) => {
+        if (n === q) score = Math.max(score, 100);
+        else if (n.includes(q) || q.includes(n)) score = Math.max(score, 60);
+      });
+      keys.compact.forEach((n) => {
+        if (n === qc) score = Math.max(score, 100);
+        else if (qc.length >= 4 && (n.includes(qc) || qc.includes(n))) score = Math.max(score, 70);
+      });
+      if (score > bestScore) {
+        bestScore = score;
+        best = c;
+      }
+    });
+    return bestScore >= 60 ? best : null;
   }
 
   /** True when the query is naming a card product, not just a merchant/category chip. */
   function isStrongCardNameQuery(query, card) {
     if (!card) return false;
     const q = normQ(query);
-    const short = normQ(card.shortName);
-    const name = normQ(card.name);
-    const idWords = normQ(String(card.id || "").replace(/-/g, " "));
+    const qc = compactQ(query);
+    const keys = cardNameKeys(card);
     if (!q || q.length < 3) return false;
-    if (q === short || q === name || q === idWords) return true;
+
     const chipish = new Set(
       [...PRIMARY_CHIPS, ...MORE_CHIPS].map((s) => normQ(s))
     );
-    if (chipish.has(q)) return false;
-    if (q.split(" ").length >= 2 && (short.includes(q) || name.includes(q) || q.includes(short))) {
-      return true;
+    if (chipish.has(q) || chipish.has(qc)) return false;
+
+    if (keys.spaced.some((n) => n === q) || keys.compact.some((n) => n === qc)) return true;
+
+    // Spaced query matching a compound name ("one card" → OneCard)
+    if (q.split(" ").length >= 2 && keys.compact.some((n) => n === qc || n.includes(qc) || qc.includes(n))) {
+      return qc.length >= 5;
     }
-    // Distinctive single token (e.g. "millennia", "octane") — not a short merchant word
-    if (q.length >= 5 && (short.includes(q) || name.includes(q))) return true;
+
+    // Distinctive single token (e.g. "millennia", "octane", "onecard")
+    if (qc.length >= 5 && keys.compact.some((n) => n.includes(qc) || qc.includes(n))) return true;
     return false;
   }
 
@@ -571,9 +602,14 @@
     if (nameHit) {
       const rest = (results || []).filter((r) => r.card && r.card.id !== nameHit.card.id);
       results = [nameHit, ...rest];
-      if (!category) {
-        category = { id: "_card", label: nameHit.card.shortName };
-      }
+      // Card-name hit is authoritative — don't show "no offer mentions…" tips
+      category = {
+        id: "_card",
+        label: nameHit.card.shortName,
+        tip: rest.length
+          ? null
+          : `Matched card “${nameHit.card.shortName}” by name. Open it for fees & current offers.`,
+      };
     }
 
     catalogBlock.hidden = true;
