@@ -1,0 +1,49 @@
+# Weekly automated catalog refresh (no manual verification checklist).
+# Requires repo secret: GEMINI_API_KEY (free from https://aistudio.google.com/apikey)
+# Optional secrets: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID for auto-deploy
+
+name: Auto refresh card offers
+
+on:
+  schedule:
+    # Every Monday 03:30 UTC (~9:00 IST)
+    - cron: "30 3 * * 1"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Refresh offers from official sources
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: npm run refresh
+
+      - name: Commit updates
+        run: |
+          git config user.name "cardwise-bot"
+          git config user.email "cardwise-bot@users.noreply.github.com"
+          git add data assets/js/cards-data.js assets/js/verification.js db/seed.sql
+          git diff --staged --quiet || git commit -m "chore: auto-refresh card offers"
+
+      - name: Push
+        run: git push
+        continue-on-error: true
+
+      - name: Deploy to Vercel (optional)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN not set — skip deploy"
+            exit 0
+          fi
+          npx vercel --prod --yes --token="$VERCEL_TOKEN"

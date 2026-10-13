@@ -1,0 +1,11 @@
+{
+  "name": "cardwise",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-cards-data.mjs && node db/generate-seed.mjs",
+    "validate": "node scripts/validate-cards.mjs",
+    "refresh": "node scripts/auto-refresh.mjs",
+    "refresh:sample": "CARDWISE_REFRESH_LIMIT=2 node scripts/auto-refresh.mjs"
+  }
+}

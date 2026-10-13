@@ -1,0 +1,20 @@
+{
+  "hdfc-freedom": {
+    "status": "auto",
+    "checked": "2026-10-13",
+    "note": "10X = BookMyShow/Swiggy/Uber/BigBasket/OYO; 2,500 CP/month cap; ~₹0.15/CP cash redeem.",
+    "source": "manual-bootstrap"
+  },
+  "au-lit": {
+    "status": "auto",
+    "checked": "2026-10-13",
+    "note": "Pack-based; grocery/apparel 5% capped ₹500/30 days; base ~0.25% without packs.",
+    "source": "manual-bootstrap"
+  },
+  "reliance-sbi-prime": {
+    "status": "auto",
+    "checked": "2026-10-13",
+    "note": "10 RP/₹100 at participating Reliance Retail (~2.5% @ ₹0.25/RP). Partner discounts: Trends/Ajio/JioMart capped — not Pantaloons/Zara. Confirm sbicard.com.",
+    "source": "manual-bootstrap"
+  }
+}

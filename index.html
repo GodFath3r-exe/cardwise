@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CardWise — Which credit card should I use in India?</title>
+    <meta
+      name="description"
+      content="Search Swiggy, movies, petrol, Amazon and more. CardWise ranks Indian credit cards by matching offers, caps and fees. Educational summary — always confirm on the bank page."
+    />
+    <link rel="canonical" href="https://cardwise-xi-ivory.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cardwise-xi-ivory.vercel.app/" />
+    <meta property="og:title" content="CardWise — Which credit card should I use?" />
+    <meta
+      property="og:description"
+      content="Rank Indian credit cards for Swiggy, movies, petrol and more. Caps and fees in plain language."
+    />
+    <meta property="og:image" content="https://cardwise-xi-ivory.vercel.app/assets/favicon.svg" />
+    <meta property="og:site_name" content="CardWise" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CardWise — Which credit card should I use?" />
+    <meta
+      name="twitter:description"
+      content="Rank Indian credit cards for Swiggy, movies, petrol and more."
+    />
+    <meta name="twitter:image" content="https://cardwise-xi-ivory.vercel.app/assets/favicon.svg" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body class="app-body">
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="CardWise home">
+        <i class="brand-mark" aria-hidden="true"></i>
+        Card<span>Wise</span>
+      </a>
+      <nav class="tabs" id="main-tabs" role="tablist" aria-label="Main">
+        <button
+          type="button"
+          class="tab is-active"
+          role="tab"
+          data-tab="offers"
+          aria-selected="true"
+          aria-controls="panel-offers"
+          id="tab-offers"
+        >
+          Explore cards
+        </button>
+        <button
+          type="button"
+          class="tab"
+          role="tab"
+          data-tab="my-cards"
+          aria-selected="false"
+          aria-controls="panel-my-cards"
+          id="tab-my-cards"
+        >
+          My Cards
+        </button>
+      </nav>
+      <div class="auth-bar" id="auth-bar" hidden></div>
+    </header>
+
+    <main>
+      <section
+        id="panel-offers"
+        class="panel"
+        data-panel="offers"
+        role="tabpanel"
+        aria-labelledby="tab-offers"
+      >
+        <div class="panel-intro">
+          <h1>Where are you spending?</h1>
+          <p>
+            Type a category like <strong>Swiggy</strong>, <strong>Zomato</strong>, or
+            <strong>petrol</strong> — we’ll rank by headline reward rate, then show caps, fees and sources.
+          </p>
+
+          <form class="cat-search" id="cat-search-form" role="search">
+            <label class="cat-search-label" for="cat-search">Search category</label>
+            <div class="cat-search-row">
+              <input
+                id="cat-search"
+                type="search"
+                placeholder="e.g. iPhone, Pantaloons, Reliance Digital, Swiggy…"
+                autocomplete="off"
+                enterkeyhint="search"
+              />
+              <button class="btn btn-primary" type="submit">Find cards</button>
+              <button class="btn btn-ghost" type="button" id="clear-search" hidden>Clear</button>
+            </div>
+            <div class="spend-row">
+              <label class="spend-field" for="spend-amount">
+                <span>Spend amount</span>
+                <div class="spend-input">
+                  <span class="spend-prefix">₹</span>
+                  <input
+                    id="spend-amount"
+                    type="number"
+                    min="0"
+                    step="100"
+                    value="2000"
+                    inputmode="numeric"
+                    autocomplete="off"
+                  />
+                </div>
+              </label>
+              <label class="only-mine">
+                <input type="checkbox" id="only-mine" />
+                Only recommend from My Cards
+              </label>
+            </div>
+          </form>
+
+          <div id="explore-chips-wrap">
+            <p class="chip-heading" id="explore-chips-label">Try these <span class="chip-hint">(pick one or more)</span></p>
+            <div
+              class="cat-chips cat-chips-primary"
+              id="cat-chips"
+              role="group"
+              aria-labelledby="explore-chips-label"
+            ></div>
+            <div class="cat-chips cat-chips-more" id="cat-chips-more" role="group" aria-label="More categories"></div>
+          </div>
+        </div>
+
+        <p class="filter-count" id="filter-count" aria-live="polite"></p>
+        <p class="verify-strip" id="verify-strip" hidden></p>
+
+        <div id="rank-block" hidden>
+          <div class="rank-list" id="rank-list" aria-live="polite"></div>
+        </div>
+
+        <div id="catalog-block">
+          <div class="card-grid" id="offers-grid"></div>
+        </div>
+      </section>
+
+      <section
+        id="panel-my-cards"
+        class="panel"
+        data-panel="my-cards"
+        role="tabpanel"
+        aria-labelledby="tab-my-cards"
+        hidden
+      >
+        <div class="panel-intro">
+          <h1>My Cards</h1>
+          <p id="my-cards-intro">
+            Search a spend category — we’ll rank <strong>only your cards</strong>.
+            We store <strong>product names only</strong> (e.g. HDFC Swiggy) in your signed-in account —
+            <strong>never card numbers, CVV, or OTP</strong>.
+          </p>
+        </div>
+
+        <div class="empty-state" id="my-cards-login-gate" hidden>
+          <p>Sign in to see your cards</p>
+          <p class="muted">
+            Wallet syncs to your Google account — not saved as browser cache.
+            No card numbers are asked for or stored.
+          </p>
+          <p class="empty-actions">
+            <button type="button" class="btn btn-primary" id="my-cards-login-btn">
+              Sign in with Google
+            </button>
+          </p>
+        </div>
+
+        <div id="my-cards-logged-in" hidden>
+          <form class="cat-search" id="my-cat-search-form" role="search">
+            <label class="cat-search-label" for="my-cat-search">Search in my cards</label>
+            <div class="cat-search-row">
+              <input
+                id="my-cat-search"
+                type="search"
+                placeholder="e.g. movies, petrol, Swiggy, bills…"
+                autocomplete="off"
+                enterkeyhint="search"
+              />
+              <button class="btn btn-primary" type="submit">Find best</button>
+              <button class="btn btn-ghost" type="button" id="my-clear-search" hidden>Clear</button>
+            </div>
+            <div class="spend-row">
+              <label class="spend-field" for="my-spend-amount">
+                <span>Spend amount</span>
+                <div class="spend-input">
+                  <span class="spend-prefix">₹</span>
+                  <input
+                    id="my-spend-amount"
+                    type="number"
+                    min="0"
+                    step="100"
+                    value="2000"
+                    inputmode="numeric"
+                    autocomplete="off"
+                  />
+                </div>
+              </label>
+            </div>
+          </form>
+
+          <div id="my-chips-wrap">
+            <p class="chip-heading" id="my-chips-label">Try these <span class="chip-hint">(pick one or more)</span></p>
+            <div
+              class="cat-chips cat-chips-primary"
+              id="my-cat-chips"
+              role="group"
+              aria-labelledby="my-chips-label"
+            ></div>
+            <div class="cat-chips cat-chips-more" id="my-cat-chips-more" role="group" aria-label="More categories"></div>
+          </div>
+
+          <p class="filter-count" id="my-filter-count" aria-live="polite"></p>
+          <p class="verify-strip" id="my-verify-strip" hidden></p>
+
+          <div id="my-rank-block" hidden>
+            <div class="rank-list" id="my-rank-list" aria-live="polite"></div>
+          </div>
+
+          <div id="my-wallet-block">
+            <h2 class="section-label" id="my-wallet-heading">Your wallet</h2>
+            <div class="empty-state" id="my-cards-empty" hidden>
+              <p>No cards yet.</p>
+              <p class="muted">Go to <strong>Explore cards</strong> → open a card → <strong>Add to My Cards</strong>.</p>
+            </div>
+            <div class="card-grid" id="my-cards-grid"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <noscript>
+      <section class="noscript-block">
+        <h2>CardWise — which credit card for this spend?</h2>
+        <p>
+          CardWise ranks popular Indian credit cards for everyday categories.
+          Enable JavaScript for live search; meanwhile, try these starting points:
+        </p>
+        <ul>
+          <li><strong>Swiggy / food delivery</strong> — often HDFC Swiggy, Axis ACE, HDFC Millennia (confirm caps).</li>
+          <li><strong>Petrol / diesel / fuel</strong> — look for IOCL / HPCL / BPCL partner cards and fuel surcharge waivers.</li>
+          <li><strong>Amazon / Flipkart / online shopping</strong> — Amazon Pay ICICI, SBI Cashback, Flipkart Axis commonly compared.</li>
+          <li><strong>Movies / BookMyShow</strong> — check Freedom, Millennia and cinema partner offers.</li>
+          <li><strong>Bills &amp; utilities</strong> — Airtel Axis, Ace and similar bill-focused cards.</li>
+        </ul>
+        <p>
+          <strong>Disclaimer:</strong> CardWise summarises public card terms for education only.
+          Fees and offers change. Confirm on the issuer’s official page before you apply or spend.
+          Card / bank names are trademarks of their owners. No affiliate links at this time.
+        </p>
+      </section>
+    </noscript>
+
+    <aside class="page-notices" aria-label="Data and disclaimer">
+      <p class="trust-line">
+        Summarises public card terms ·
+        <strong>Always confirm on the bank’s page</strong> before you spend.
+        Offers and caps change often.
+      </p>
+      <p class="verify-banner" id="verify-banner" hidden></p>
+    </aside>
+
+    <footer class="site-footer">
+      <p>
+        <strong>CardWise</strong> summarises public card terms for clarity — not bank advice.
+        Always confirm fees &amp; offers on the bank’s official page.
+      </p>
+      <p class="footer-legal">
+        Bank and card names are trademarks of their respective owners. We don’t ask for or store card numbers.
+        No affiliate links are used at this time. If that changes, we’ll disclose it clearly.
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="assets/js/safe.js"></script>
+    <script src="assets/js/supabase-config.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cards-data.js"></script>
+    <script src="assets/js/verification.js"></script>
+    <script src="assets/js/supabase-api.js"></script>
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/my-cards.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

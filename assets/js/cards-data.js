@@ -1,0 +1,1971 @@
+/**
+ * CardWise catalog — GENERATED from data/cards.json
+ * Do not edit by hand. Run: node scripts/generate-cards-data.mjs
+ * lastVerified: 2026-10-13
+ */
+window.CARDWISE_META = {
+  "lastVerified": "2026-10-13",
+  "lastVerifiedLabel": "13 Oct 2026",
+  "note": "Always confirm on the bank’s page before you apply or spend.",
+  "phase": "Top India cards"
+};
+
+function card(base) {
+  return Object.assign({ group: "popular", earnLabel: "cashback" }, base);
+}
+
+window.CARDWISE_CARDS = [
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "amazon-pay-icici",
+      "name": "Amazon Pay ICICI Bank Credit Card",
+      "shortName": "Amazon Pay ICICI",
+      "bank": "ICICI Bank",
+      "network": "Visa",
+      "tagline": "Lifetime free · best on Amazon",
+      "bestFor": "Amazon",
+      "accent": "#b45309",
+      "gradient": "linear-gradient(160deg, #292524 0%, #1c1917 45%, #b45309 130%)",
+      "joiningFee": "₹0",
+      "annualFee": "₹0",
+      "waiver": "Lifetime free",
+      "feeHint": "No joining/annual fee. Invite-only. Rewards as Amazon Pay balance.",
+      "offers": [
+          {
+              "title": "Amazon (Prime)",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "Uncapped*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "high",
+              "merchants": [
+                  "amazon"
+              ],
+              "hint": "*Eligible Amazon spends for Prime members"
+          },
+          {
+              "title": "Amazon (Non-Prime)",
+              "rate": "3%",
+              "rateValue": 3,
+              "capLabel": "Uncapped*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "mid",
+              "merchants": [
+                  "amazon"
+              ]
+          },
+          {
+              "title": "Amazon Pay partners",
+              "rate": "2%",
+              "rateValue": 2,
+              "capLabel": "Uncapped",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "mid",
+              "merchants": [
+                  "amazon-pay"
+              ]
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "Uncapped",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "ICICI Amazon Pay",
+              "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "axis-flipkart",
+      "name": "Flipkart Axis Bank Credit Card",
+      "shortName": "Axis Flipkart",
+      "bank": "Axis Bank",
+      "network": "Visa",
+      "tagline": "Flipkart · Myntra · Cleartrip",
+      "bestFor": "Flipkart / Myntra",
+      "accent": "#9a3412",
+      "gradient": "linear-gradient(160deg, #1e3a5f 0%, #0f172a 55%, #9a3412 130%)",
+      "joiningFee": "₹NIL*",
+      "annualFee": "₹500 + GST",
+      "waiver": "₹3.5L spend",
+      "feeHint": "*Limited joining offer on Axis site. Year-2 ₹500 + GST.",
+      "offers": [
+          {
+              "title": "Myntra",
+              "rate": "7.5%",
+              "rateValue": 7.5,
+              "capLabel": "₹4,000 / quarter",
+              "capAmount": 4000,
+              "capPeriod": "quarter",
+              "tier": "high",
+              "merchants": [
+                  "myntra"
+              ]
+          },
+          {
+              "title": "Flipkart",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹4,000 / quarter",
+              "capAmount": 4000,
+              "capPeriod": "quarter",
+              "tier": "mid",
+              "merchants": [
+                  "flipkart"
+              ],
+              "hint": "Excludes Flipkart Health"
+          },
+          {
+              "title": "Cleartrip",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹4,000 / quarter",
+              "capAmount": 4000,
+              "capPeriod": "quarter",
+              "tier": "mid",
+              "merchants": [
+                  "cleartrip"
+              ]
+          },
+          {
+              "title": "Preferred merchants",
+              "rate": "4%",
+              "rateValue": 4,
+              "capLabel": "Uncapped",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "merchants": [
+                  "swiggy"
+              ],
+              "hint": "Often includes Swiggy food"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "Uncapped",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Axis Flipkart",
+              "url": "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "hdfc-swiggy",
+      "name": "HDFC Bank Swiggy Credit Card",
+      "shortName": "HDFC Swiggy",
+      "bank": "HDFC Bank",
+      "network": "Visa / Diners",
+      "tagline": "10% on Swiggy · strong food card",
+      "bestFor": "Swiggy",
+      "accent": "#ea580c",
+      "gradient": "linear-gradient(160deg, #9a3412 0%, #0f172a 50%, #fb923c 130%)",
+      "joiningFee": "₹500 + GST",
+      "annualFee": "₹500 + GST",
+      "waiver": "₹2L spend*",
+      "feeHint": "*Confirm current waiver on HDFC page. Min order rules may apply for 10% (e.g. ₹249+).",
+      "offers": [
+          {
+              "title": "Swiggy / Instamart / Dineout",
+              "rate": "10%",
+              "rateValue": 10,
+              "capLabel": "₹1,500 / month",
+              "capAmount": 1500,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "swiggy",
+                  "instamart",
+                  "dineout"
+              ],
+              "hint": "On Swiggy app (Food, Instamart, Dineout, Genie). Min order rules may apply."
+          },
+          {
+              "title": "Amazon, Flipkart, Myntra, Nykaa…",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹1,500 / month",
+              "capAmount": 1500,
+              "capPeriod": "month",
+              "tier": "mid",
+              "merchants": [
+                  "amazon",
+                  "flipkart",
+                  "myntra",
+                  "nykaa"
+              ],
+              "hint": "Partner list can include Nykaa / Cleartrip — confirm HDFC"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "Uncapped*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "hint": "*Confirm current base earn on HDFC page"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC Swiggy card",
+              "url": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/swiggy-hdfc-bank-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "hdfc-millennia",
+      "name": "HDFC Millennia Credit Card",
+      "shortName": "HDFC Millennia",
+      "bank": "HDFC Bank",
+      "network": "Visa / RuPay",
+      "tagline": "5% on 10 popular apps",
+      "bestFor": "Daily apps",
+      "accent": "#1d4ed8",
+      "gradient": "linear-gradient(160deg, #1e3a8a 0%, #0f172a 50%, #2563eb 130%)",
+      "joiningFee": "₹1,000 + GST",
+      "annualFee": "₹1,000 + GST",
+      "waiver": "₹1L spend",
+      "feeHint": "Renewal waived at ₹1L+ spend in the year before renewal.",
+      "offers": [
+          {
+              "title": "Amazon, Flipkart, Myntra, Swiggy, Zomato…",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "~₹1,000 / month",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "amazon",
+                  "flipkart",
+                  "myntra",
+                  "swiggy",
+                  "zomato",
+                  "uber",
+                  "bookmyshow"
+              ],
+              "hint": "Also Uber, BookMyShow, Tata CLiQ, Sony LIV, Cult.fit — confirm current 10-app list"
+          },
+          {
+              "title": "Zomato / Swiggy food delivery",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "~₹1,000 / month*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "zomato",
+                  "swiggy"
+              ],
+              "hint": "*Shares the Millennia monthly cashback cap"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "~₹1,000 / month",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC Millennia",
+              "url": "https://www.hdfc.bank.in/credit-cards/millennia-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "sbi-cashback",
+      "name": "CASHBACK SBI Card",
+      "shortName": "SBI Cashback",
+      "bank": "SBI Card",
+      "network": "Visa",
+      "tagline": "5% on almost all online",
+      "bestFor": "Online shopping",
+      "accent": "#15803d",
+      "gradient": "linear-gradient(160deg, #14532d 0%, #0f172a 50%, #22c55e 130%)",
+      "joiningFee": "₹999 + GST",
+      "annualFee": "₹999 + GST",
+      "waiver": "₹2L spend",
+      "feeHint": "From Apr 2026: online cashback capped ₹2,000/statement; offline ₹2,000; max ₹4,000 total.",
+      "offers": [
+          {
+              "title": "Online spends",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹2,000 / statement",
+              "capAmount": 2000,
+              "capPeriod": "statement",
+              "tier": "high",
+              "merchants": [
+                  "amazon",
+                  "flipkart",
+                  "myntra",
+                  "nykaa",
+                  "online"
+              ],
+              "hint": "Often strong for Zepto, Blinkit, Nykaa & other online apps"
+          },
+          {
+              "title": "Zepto / Blinkit / quick commerce (online)",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹2,000 / statement*",
+              "capAmount": 2000,
+              "capPeriod": "statement",
+              "tier": "high",
+              "merchants": [
+                  "zepto",
+                  "blinkit"
+              ],
+              "hint": "*Counts under online cashback cap"
+          },
+          {
+              "title": "Offline (POS)",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "₹2,000 / statement",
+              "capAmount": 2000,
+              "capPeriod": "statement",
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "SBI Cashback",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.html"
+          },
+          {
+              "label": "Cap revision PDF",
+              "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "axis-ace",
+      "name": "Axis Bank ACE Credit Card",
+      "shortName": "Axis ACE",
+      "bank": "Axis Bank",
+      "network": "Visa",
+      "tagline": "Bills on GPay · food apps",
+      "bestFor": "Bills & food",
+      "accent": "#0f766e",
+      "gradient": "linear-gradient(160deg, #134e4a 0%, #0f172a 50%, #14b8a6 130%)",
+      "joiningFee": "₹499 + GST",
+      "annualFee": "₹499 + GST",
+      "waiver": "₹2L spend",
+      "feeHint": "New applications may be restricted — useful if you already hold it. 5%+4% share ₹500/statement cap.",
+      "offers": [
+          {
+              "title": "Utilities on Google Pay",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹500 combined*",
+              "capAmount": 500,
+              "capPeriod": "statement",
+              "tier": "high",
+              "hint": "*Shared with Swiggy/Zomato/Ola bucket"
+          },
+          {
+              "title": "Swiggy, Zomato, Ola",
+              "rate": "4%",
+              "rateValue": 4,
+              "capLabel": "₹500 combined*",
+              "capAmount": 500,
+              "capPeriod": "statement",
+              "tier": "mid",
+              "hint": "Strong everyday Zomato / Swiggy cashback when ACE is open"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1.5%",
+              "rateValue": 1.5,
+              "capLabel": "No cap",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Axis ACE",
+              "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "simplyclick-sbi",
+      "name": "SimplyCLICK SBI Card",
+      "shortName": "SimplyCLICK",
+      "bank": "SBI Card",
+      "network": "Visa",
+      "tagline": "10X on select online partners",
+      "bestFor": "Partner apps",
+      "accent": "#db2777",
+      "gradient": "linear-gradient(160deg, #9d174d 0%, #0f172a 50%, #f472b6 130%)",
+      "joiningFee": "₹499 + GST",
+      "annualFee": "₹499 + GST",
+      "waiver": "₹1L spend",
+      "feeHint": "Amazon is usually NOT on the 10X list anymore — often earns 5X (other online).",
+      "offers": [
+          {
+              "title": "10X partners (Myntra, Swiggy, Zomato, BMS…)",
+              "rate": "~2.5%",
+              "rateValue": 2.5,
+              "capLabel": "RP caps apply",
+              "capAmount": 2500,
+              "capPeriod": "month",
+              "tier": "high",
+              "hint": "Partner list changes — confirm Zomato/Swiggy still on 10X"
+          },
+          {
+              "title": "Other online (incl. Amazon)",
+              "rate": "~1.25%",
+              "rateValue": 1.25,
+              "capLabel": "RP caps apply",
+              "capAmount": 1250,
+              "capPeriod": "month",
+              "tier": "mid"
+          },
+          {
+              "title": "Offline",
+              "rate": "~0.25%",
+              "rateValue": 0.25,
+              "capLabel": "1 RP / ₹100",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "SimplyCLICK",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/shopping/simplyclick-sbi-card.page"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "NeuCoins",
+      "id": "tata-neu-infinity",
+      "name": "Tata Neu Infinity SBI Credit Card",
+      "shortName": "Tata Neu Infinity",
+      "bank": "SBI Card",
+      "network": "Visa / RuPay",
+      "tagline": "Up to 10% NeuCoins on Tata",
+      "bestFor": "Tata ecosystem",
+      "accent": "#0e7490",
+      "gradient": "linear-gradient(160deg, #155e75 0%, #0f172a 50%, #22d3ee 130%)",
+      "joiningFee": "₹1,499 + GST",
+      "annualFee": "₹1,499 + GST",
+      "waiver": "₹3L spend",
+      "feeHint": "NeuCoins redeem on Tata Neu app. RuPay variant can earn on UPI.",
+      "offers": [
+          {
+              "title": "Tata Neu select categories",
+              "rate": "Up to 10%",
+              "rateValue": 10,
+              "capLabel": "NeuCoins",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Tata brands / Neu app",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "NeuCoins",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1.5%",
+              "rateValue": 1.5,
+              "capLabel": "NeuCoins",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Tata Neu Infinity",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/tata-neu-infinity-sbi-card.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "hdfc-moneyback-plus",
+      "name": "HDFC MoneyBack+ Credit Card",
+      "shortName": "HDFC MoneyBack+",
+      "bank": "HDFC Bank",
+      "network": "Visa / Mastercard",
+      "tagline": "Entry HDFC cashback card",
+      "bestFor": "Beginners",
+      "accent": "#2563eb",
+      "gradient": "linear-gradient(160deg, #1e40af 0%, #0f172a 55%, #60a5fa 130%)",
+      "joiningFee": "₹500 + GST",
+      "annualFee": "₹500 + GST",
+      "waiver": "₹50k spend*",
+      "feeHint": "*Confirm current waiver. Lower earn vs Millennia — good starter HDFC card.",
+      "offers": [
+          {
+              "title": "Amazon, Flipkart, Swiggy, Zomato…",
+              "rate": "~2.5%",
+              "rateValue": 2.5,
+              "capLabel": "Monthly RP cap",
+              "capAmount": 625,
+              "capPeriod": "month",
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "See HDFC",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC MoneyBack+",
+              "url": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/moneyback-plus"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "axis-airtel",
+      "name": "Axis Bank Airtel Credit Card",
+      "shortName": "Axis Airtel",
+      "bank": "Axis Bank",
+      "network": "Visa",
+      "tagline": "Airtel bills · utilities · food",
+      "bestFor": "Airtel users",
+      "accent": "#dc2626",
+      "gradient": "linear-gradient(160deg, #7f1d1d 0%, #0f172a 50%, #f87171 130%)",
+      "joiningFee": "₹500 + GST",
+      "annualFee": "₹500 + GST",
+      "waiver": "₹2L spend*",
+      "feeHint": "*Confirm Axis Airtel page for current waiver & utility list.",
+      "offers": [
+          {
+              "title": "Airtel payments",
+              "rate": "25%",
+              "rateValue": 25,
+              "capLabel": "Low monthly cap",
+              "capAmount": 250,
+              "capPeriod": "month",
+              "tier": "high",
+              "hint": "Typically capped (often ~₹250/month) — check current T&Cs"
+          },
+          {
+              "title": "Utilities / select partners",
+              "rate": "10%",
+              "rateValue": 10,
+              "capLabel": "Capped",
+              "capAmount": 500,
+              "capPeriod": "month",
+              "tier": "mid"
+          },
+          {
+              "title": "Swiggy / Zomato / BigBasket",
+              "rate": "10%",
+              "rateValue": 10,
+              "capLabel": "₹500 / month*",
+              "capAmount": 500,
+              "capPeriod": "month",
+              "tier": "mid",
+              "merchants": [
+                  "swiggy",
+                  "zomato",
+                  "bigbasket"
+              ],
+              "hint": "*Partner cashback bucket — confirm current Axis Airtel T&Cs"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "Uncapped*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "hint": "*Confirm base earn on Axis page"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Axis Airtel card",
+              "url": "https://www.axis.bank.in/cards/credit-card/airtel-axis-bank-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "Scapia coins",
+      "id": "scapia-federal",
+      "name": "Federal Bank Scapia Credit Card",
+      "shortName": "Scapia",
+      "bank": "Federal Bank",
+      "network": "Visa",
+      "tagline": "Lifetime free travel card",
+      "bestFor": "Travel / forex",
+      "accent": "#4f46e5",
+      "gradient": "linear-gradient(160deg, #312e81 0%, #0f172a 50%, #818cf8 130%)",
+      "joiningFee": "₹0",
+      "annualFee": "₹0",
+      "waiver": "Lifetime free",
+      "feeHint": "Popular for low forex + travel. Coin value depends on redemption — treat % as approximate.",
+      "offers": [
+          {
+              "title": "Travel / Scapia bookings",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "Scapia coins",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~2%",
+              "rateValue": 2,
+              "capLabel": "Scapia coins",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Forex markup",
+              "rate": "0%*",
+              "rateValue": 0,
+              "capLabel": "Low forex*",
+              "capAmount": null,
+              "tier": "base",
+              "hint": "*Confirm current forex fee on Scapia/Federal"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Federal Bank Scapia",
+              "url": "https://www.federal.bank.in/scapia"
+          },
+          {
+              "label": "Scapia",
+              "url": "https://www.scapia.cards/"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "MR points",
+      "id": "amex-smartearn",
+      "name": "American Express SmartEarn Credit Card",
+      "shortName": "Amex SmartEarn",
+      "bank": "American Express",
+      "network": "Amex",
+      "tagline": "Entry Amex · membership rewards",
+      "bestFor": "Amex starters",
+      "accent": "#177c74",
+      "gradient": "linear-gradient(160deg, #115e59 0%, #0f172a 50%, #2dd4bf 130%)",
+      "joiningFee": "₹495 + GST*",
+      "annualFee": "₹495 + GST*",
+      "waiver": "See Amex",
+      "feeHint": "*Confirm current fee. Acceptance is thinner than Visa/Mastercard offline.",
+      "offers": [
+          {
+              "title": "Amex offers / select partners",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "MR points",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "MR points",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Amex SmartEarn",
+              "url": "https://www.americanexpress.com/in/credit-cards/smart-earn-credit-card/"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "idfc-first-select",
+      "name": "IDFC FIRST Select Credit Card",
+      "shortName": "IDFC FIRST Select",
+      "bank": "IDFC FIRST Bank",
+      "network": "Visa / Mastercard",
+      "tagline": "Low forex · milestones",
+      "bestFor": "Everyday + forex",
+      "accent": "#be185d",
+      "gradient": "linear-gradient(160deg, #9d174d 0%, #0f172a 50%, #f472b6 130%)",
+      "joiningFee": "₹0 / low*",
+      "annualFee": "See IDFC",
+      "waiver": "See IDFC",
+      "feeHint": "*Variants differ (Select / Wealth / Wow). Confirm fee & lounge rules on IDFC site.",
+      "offers": [
+          {
+              "title": "Online / retail spends",
+              "rate": "~2–3%",
+              "rateValue": 2.5,
+              "capLabel": "See IDFC",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "See IDFC",
+              "capAmount": null,
+              "tier": "base"
+          },
+          {
+              "title": "Forex",
+              "rate": "Low markup",
+              "rateValue": 1,
+              "capLabel": "Often ~1–2%",
+              "capAmount": null,
+              "tier": "mid"
+          }
+      ],
+      "sources": [
+          {
+              "label": "IDFC FIRST cards",
+              "url": "https://www.idfcfirstbank.com/credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "OneCard points",
+      "id": "onecard",
+      "name": "OneCard Credit Card",
+      "shortName": "OneCard",
+      "bank": "OneCard (SBM / partners)",
+      "network": "Visa",
+      "tagline": "Metal card · app-first",
+      "bestFor": "App rewards",
+      "accent": "#171717",
+      "gradient": "linear-gradient(160deg, #262626 0%, #0a0a0a 55%, #737373 130%)",
+      "joiningFee": "₹0*",
+      "annualFee": "₹0*",
+      "waiver": "Usually free*",
+      "feeHint": "*Issued with partner banks. Rewards & limits vary by offer — check app.",
+      "offers": [
+          {
+              "title": "Select categories / offers",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "App offers",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "Points",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "OneCard",
+              "url": "https://www.getonecard.app/"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "bpcl-sbi-octane",
+      "name": "BPCL SBI Card OCTANE",
+      "shortName": "BPCL SBI Octane",
+      "bank": "SBI Card",
+      "network": "Visa",
+      "tagline": "Best-in-class BPCL fuel value",
+      "bestFor": "Petrol / BPCL",
+      "accent": "#0369a1",
+      "gradient": "linear-gradient(160deg, #0c4a6e 0%, #0f172a 50%, #38bdf8 130%)",
+      "joiningFee": "₹1,499 + GST",
+      "annualFee": "₹1,499 + GST",
+      "waiver": "₹2L spend",
+      "feeHint": "25 RP/₹100 on BPCL petrol/diesel (cap) + surcharge waiver ≈ up to ~7.25% value back.",
+      "offers": [
+          {
+              "title": "BPCL petrol / diesel / lubricants",
+              "rate": "~6.25%*",
+              "rateValue": 6.25,
+              "capLabel": "2,500 RP / statement",
+              "capAmount": 625,
+              "capPeriod": "statement",
+              "tier": "high",
+              "hint": "*Points + ~1% fuel surcharge waiver at BPCL"
+          },
+          {
+              "title": "Dining, movies, grocery",
+              "rate": "~2.5%",
+              "rateValue": 2.5,
+              "capLabel": "10X RP",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~0.25%",
+              "rateValue": 0.25,
+              "capLabel": "1 RP / ₹100",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "BPCL SBI Card",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card.html"
+          },
+          {
+              "label": "BPCL Octane T&Cs",
+              "url": "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/BPCLOctanetnc.pdf"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "points (₹)",
+      "id": "phonepe-sbi-purple",
+      "name": "PhonePe SBI Card PURPLE",
+      "shortName": "PhonePe Purple",
+      "bank": "SBI Card",
+      "network": "Visa / RuPay",
+      "tagline": "PhonePe bills · online 2%",
+      "bestFor": "PhonePe",
+      "accent": "#5b21b6",
+      "gradient": "linear-gradient(160deg, #4c1d95 0%, #0f172a 50%, #c084fc 130%)",
+      "joiningFee": "₹499 + GST",
+      "annualFee": "₹499 + GST",
+      "waiver": "₹1L spend",
+      "feeHint": "1 RP ≈ ₹1 statement credit. Monthly caps apply (tightened from Jul 2026).",
+      "offers": [
+          {
+              "title": "PhonePe / Pincode spends",
+              "rate": "3%",
+              "rateValue": 3,
+              "capLabel": "1,000 RP / month*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "high"
+          },
+          {
+              "title": "Online spends",
+              "rate": "2%",
+              "rateValue": 2,
+              "capLabel": "1,000 RP / month*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "Capped",
+              "capAmount": 750,
+              "capPeriod": "month",
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "PhonePe Purple",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/phonepe-sbi-card-purple.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "EDGE Miles",
+      "id": "axis-atlas",
+      "name": "Axis Bank Atlas Credit Card",
+      "shortName": "Axis Atlas",
+      "bank": "Axis Bank",
+      "network": "Visa",
+      "tagline": "Travel EDGE miles",
+      "bestFor": "Travel",
+      "accent": "#1e3a8a",
+      "gradient": "linear-gradient(160deg, #1e3a8a 0%, #0f172a 50%, #93c5fd 130%)",
+      "joiningFee": "₹5,000 + GST",
+      "annualFee": "₹5,000 + GST",
+      "waiver": "See Axis",
+      "feeHint": "Premium travel card. Mile value varies by redemption — % below is approximate.",
+      "offers": [
+          {
+              "title": "Travel EDGE / Atlas partners",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "EDGE Miles",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~2%",
+              "rateValue": 2,
+              "capLabel": "EDGE Miles",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Axis Atlas",
+              "url": "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "Reward points",
+      "id": "hdfc-regalia-gold",
+      "name": "HDFC Regalia Gold Credit Card",
+      "shortName": "HDFC Regalia Gold",
+      "bank": "HDFC Bank",
+      "network": "Visa / Diners",
+      "tagline": "Premium lifestyle · SmartBuy",
+      "bestFor": "Premium lifestyle",
+      "accent": "#a16207",
+      "gradient": "linear-gradient(160deg, #713f12 0%, #0f172a 50%, #eab308 130%)",
+      "joiningFee": "₹2,500 + GST",
+      "annualFee": "₹2,500 + GST",
+      "waiver": "₹4L spend*",
+      "feeHint": "*Confirm current waiver. Value jumps via SmartBuy / travel redemptions.",
+      "offers": [
+          {
+              "title": "SmartBuy / travel portal",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "See HDFC",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Retail spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "Base RP",
+              "rateValue": 1,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC Regalia Gold",
+              "url": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/regalia-gold-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "EDGE Rewards",
+      "id": "axis-neo",
+      "name": "Axis Bank Neo Credit Card",
+      "shortName": "Axis Neo",
+      "bank": "Axis Bank",
+      "network": "Visa / Mastercard",
+      "tagline": "Lifetime free entry Axis card",
+      "bestFor": "Beginners",
+      "accent": "#0ea5e9",
+      "gradient": "linear-gradient(160deg, #0c4a6e 0%, #0f172a 50%, #38bdf8 130%)",
+      "joiningFee": "₹0",
+      "annualFee": "₹0",
+      "waiver": "Lifetime free",
+      "feeHint": "Good first Axis card. Rewards are modest vs ACE / Flipkart — confirm current EDGE rules.",
+      "offers": [
+          {
+              "title": "Google Pay / select partners",
+              "rate": "Boosted",
+              "rateValue": 2,
+              "capLabel": "See Axis",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "EDGE",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Axis Neo",
+              "url": "https://www.axisbank.com/retail/cards/credit-card/axis-bank-neo-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "NeuCoins",
+      "id": "tata-neu-plus",
+      "name": "Tata Neu Plus SBI Credit Card",
+      "shortName": "Tata Neu Plus",
+      "bank": "SBI Card",
+      "network": "Visa / RuPay",
+      "tagline": "Entry Tata Neu · up to 5%",
+      "bestFor": "Tata starters",
+      "accent": "#0891b2",
+      "gradient": "linear-gradient(160deg, #164e63 0%, #0f172a 50%, #67e8f9 130%)",
+      "joiningFee": "₹499 + GST",
+      "annualFee": "₹499 + GST",
+      "waiver": "₹1L spend",
+      "feeHint": "Lower tier than Infinity. RuPay variant can work on UPI — confirm SBI page.",
+      "offers": [
+          {
+              "title": "Tata Neu / Tata brands",
+              "rate": "Up to 5%",
+              "rateValue": 5,
+              "capLabel": "NeuCoins",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1%",
+              "rateValue": 1,
+              "capLabel": "NeuCoins",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Tata Neu Plus",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/tata-neu-plus-sbi-card.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cash points",
+      "id": "hdfc-pixel-play",
+      "name": "HDFC Bank Pixel Play Credit Card",
+      "shortName": "HDFC Pixel Play",
+      "bank": "HDFC Bank",
+      "network": "Visa / RuPay",
+      "tagline": "Pick your reward categories",
+      "bestFor": "Custom categories",
+      "accent": "#7c3aed",
+      "gradient": "linear-gradient(160deg, #5b21b6 0%, #0f172a 50%, #c4b5fd 130%)",
+      "joiningFee": "₹500 + GST*",
+      "annualFee": "₹500 + GST*",
+      "waiver": "See HDFC",
+      "feeHint": "*Confirm current fee. Choose boosted categories in the app (often food, shopping, travel).",
+      "offers": [
+          {
+              "title": "Selected categories",
+              "rate": "Up to 10%",
+              "rateValue": 10,
+              "capLabel": "Monthly caps",
+              "capAmount": null,
+              "tier": "high",
+              "hint": "Depends on categories you pick"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "See HDFC",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC Pixel Play",
+              "url": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/pixel-play-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "hdfc-freedom",
+      "name": "HDFC Freedom Credit Card",
+      "shortName": "HDFC Freedom",
+      "bank": "HDFC Bank",
+      "network": "Visa / Mastercard",
+      "tagline": "Fuel + groceries + dining",
+      "bestFor": "Fuel & grocery",
+      "accent": "#059669",
+      "gradient": "linear-gradient(160deg, #065f46 0%, #0f172a 50%, #34d399 130%)",
+      "joiningFee": "₹500 + GST",
+      "annualFee": "₹500 + GST",
+      "waiver": "₹50k spend*",
+      "feeHint": "*₹500 + GST; waiver at ₹50k spend/year. HDFC has published changes effective 15 May 2026 — re-check the official page.",
+      "offers": [
+          {
+              "title": "BookMyShow, Swiggy, Uber, BigBasket, OYO",
+              "rate": "10X CashPoints (~1%*)",
+              "rateValue": 1,
+              "capLabel": "2,500 CP / month*",
+              "capAmount": 375,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "bookmyshow",
+                  "swiggy",
+                  "uber",
+                  "bigbasket",
+                  "oyo"
+              ],
+              "hint": "*10 CashPoints per ₹150. Cap 2,500 CashPoints/calendar month on this 10X feature (not unlimited). Cash redeem often ~₹0.15/CP → ~₹375 max/month. Confirm HDFC."
+          },
+          {
+              "title": "Movies on BookMyShow",
+              "rate": "10X CashPoints (~1%*)",
+              "rateValue": 1,
+              "capLabel": "Shares 2,500 CP / month*",
+              "capAmount": 375,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "bookmyshow",
+                  "movies"
+              ],
+              "hint": "*Same 10X merchant bucket + monthly CashPoint cap — not unlimited movie cashback."
+          },
+          {
+              "title": "Petrol / diesel fuel surcharge waiver",
+              "rate": "1% waiver",
+              "rateValue": 1,
+              "capLabel": "₹250 / statement*",
+              "capAmount": 250,
+              "capPeriod": "statement",
+              "tier": "mid",
+              "merchants": [
+                  "petrol",
+                  "fuel",
+                  "diesel"
+              ],
+              "hint": "*Txn usually ₹400–₹5,000"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~0.1%*",
+              "rateValue": 0.1,
+              "capLabel": "1 CP / ₹150",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "hint": "*At ~₹0.15 per CashPoint if redeemed as cash"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC Freedom",
+              "url": "https://www.hdfc.bank.in/credit-cards/freedom-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "Reward points",
+      "id": "sbi-elite",
+      "name": "ELITE SBI Card",
+      "shortName": "SBI Elite",
+      "bank": "SBI Card",
+      "network": "Visa / Amex",
+      "tagline": "Premium SBI · dining & travel",
+      "bestFor": "Premium lifestyle",
+      "accent": "#854d0e",
+      "gradient": "linear-gradient(160deg, #713f12 0%, #0f172a 50%, #fbbf24 130%)",
+      "joiningFee": "₹4,999 + GST",
+      "annualFee": "₹4,999 + GST",
+      "waiver": "₹10L spend*",
+      "feeHint": "*Confirm current waiver. Strong dining/department-store RP + lounges — check T&Cs.",
+      "offers": [
+          {
+              "title": "Dining / department stores",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "RP caps",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "SBI Elite",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/sbi-card-elite.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "sbi-pulse",
+      "name": "PULSE SBI Card",
+      "shortName": "SBI Pulse",
+      "bank": "SBI Card",
+      "network": "Visa",
+      "tagline": "Dining · movies · entertainment",
+      "bestFor": "Dining & movies",
+      "accent": "#e11d48",
+      "gradient": "linear-gradient(160deg, #9f1239 0%, #0f172a 50%, #fb7185 130%)",
+      "joiningFee": "₹1,499 + GST",
+      "annualFee": "₹1,499 + GST",
+      "waiver": "₹2L spend*",
+      "feeHint": "*Confirm waiver. Often strong on dining / entertainment partners.",
+      "offers": [
+          {
+              "title": "Dining / entertainment",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "RP caps",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "SBI Pulse",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/sbi-card-pulse.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "hsbc-live-plus",
+      "name": "HSBC Live+ Credit Card",
+      "shortName": "HSBC Live+",
+      "bank": "HSBC",
+      "network": "Visa",
+      "tagline": "10% on groceries & dining*",
+      "bestFor": "Grocery & dining",
+      "accent": "#db2777",
+      "gradient": "linear-gradient(160deg, #9d174d 0%, #0f172a 50%, #f9a8d4 130%)",
+      "joiningFee": "₹0 / offer*",
+      "annualFee": "₹999 + GST*",
+      "waiver": "See HSBC",
+      "feeHint": "*Caps apply (often monthly). Confirm current cashback list & fee waiver on HSBC.",
+      "offers": [
+          {
+              "title": "Groceries & dining",
+              "rate": "10%",
+              "rateValue": 10,
+              "capLabel": "₹1,000 / month*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "grocery",
+                  "dining"
+              ],
+              "hint": "*Confirm current HSBC Live+ monthly cashback cap"
+          },
+          {
+              "title": "Other spends",
+              "rate": "1.5%",
+              "rateValue": 1.5,
+              "capLabel": "Uncapped*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "hint": "*Confirm base cashback on HSBC page"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HSBC Live+",
+              "url": "https://www.hsbc.co.in/credit-cards/products/live-plus/"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "MR points",
+      "id": "amex-mrcc",
+      "name": "American Express Membership Rewards Credit Card",
+      "shortName": "Amex MRCC",
+      "bank": "American Express",
+      "network": "Amex",
+      "tagline": "Popular Amex rewards earner",
+      "bestFor": "Amex rewards",
+      "accent": "#0f766e",
+      "gradient": "linear-gradient(160deg, #134e4a 0%, #0f172a 50%, #5eead4 130%)",
+      "joiningFee": "₹4,500 + GST*",
+      "annualFee": "₹4,500 + GST*",
+      "waiver": "See Amex",
+      "feeHint": "*Fee & bonus offers change often. Thin offline acceptance vs Visa/MC.",
+      "offers": [
+          {
+              "title": "Amex offers / travel partners",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "MR points",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "MR points",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Amex MRCC",
+              "url": "https://www.americanexpress.com/in/credit-cards/membership-rewards-card/"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback / points",
+      "id": "kotak-811",
+      "name": "Kotak 811 #Dream Different Credit Card",
+      "shortName": "Kotak 811",
+      "bank": "Kotak Mahindra Bank",
+      "network": "Visa / RuPay",
+      "tagline": "Digital Kotak · everyday rewards",
+      "bestFor": "Kotak users",
+      "accent": "#ea580c",
+      "gradient": "linear-gradient(160deg, #9a3412 0%, #0f172a 50%, #fdba74 130%)",
+      "joiningFee": "₹0*",
+      "annualFee": "₹0 / low*",
+      "waiver": "See Kotak",
+      "feeHint": "*Often linked to 811 digital savings. Confirm fee & reward grid on Kotak.",
+      "offers": [
+          {
+              "title": "Select categories / offers",
+              "rate": "Boosted",
+              "rateValue": 2,
+              "capLabel": "See Kotak",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "See Kotak",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Kotak credit cards",
+              "url": "https://www.kotak.com/en/personal-banking/cards/credit-cards.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "au-lit",
+      "name": "AU Bank LIT Credit Card",
+      "shortName": "AU LIT",
+      "bank": "AU Small Finance Bank",
+      "network": "Visa / RuPay",
+      "tagline": "Lifetime free · pick features in AU 0101 app",
+      "bestFor": "Custom cashback",
+      "accent": "#16a34a",
+      "gradient": "linear-gradient(160deg, #14532d 0%, #0f172a 50%, #86efac 130%)",
+      "joiningFee": "₹0",
+      "annualFee": "₹0",
+      "waiver": "Lifetime free",
+      "feeHint": "Card is free; each benefit pack costs ~₹49–₹399 per 90 days in the AU 0101 app. Only active packs earn boosted cashback.",
+      "offers": [
+          {
+              "title": "Grocery (with grocery pack on)",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹500 / 30 days",
+              "capAmount": 500,
+              "capPeriod": "month",
+              "tier": "high",
+              "hint": "Pack fee often ~₹299 / 90 days — confirm AU app"
+          },
+          {
+              "title": "Apparel / fashion (with apparel pack on)",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹500 / 30 days",
+              "capAmount": 500,
+              "capPeriod": "month",
+              "tier": "high",
+              "hint": "Pack fee often ~₹199 / 90 days — confirm AU app"
+          },
+          {
+              "title": "Petrol / diesel surcharge waiver (fuel pack)",
+              "rate": "1% waiver",
+              "rateValue": 1,
+              "capLabel": "₹400–₹5,000 txn*",
+              "capAmount": null,
+              "tier": "mid",
+              "hint": "*Typical fuel pack ~₹49 / 90 days; all fuel stations"
+          },
+          {
+              "title": "Milestone retail cashback (optional pack)",
+              "rate": "2–5%",
+              "rateValue": 2,
+              "capLabel": "₹500–₹1,000 / 30 days*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "mid",
+              "hint": "*Needs min monthly spend for the pack you pick"
+          },
+          {
+              "title": "Base card (no packs)",
+              "rate": "~0.25%",
+              "rateValue": 0.25,
+              "capLabel": "1 RP / ₹100",
+              "capAmount": null,
+              "tier": "base",
+              "hint": "Without packs, rewards are low — activate what you use"
+          }
+      ],
+      "sources": [
+          {
+              "label": "AU LIT official",
+              "url": "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card"
+          },
+          {
+              "label": "LIT product guide (PDF)",
+              "url": "https://www.au.bank.in/campaign/lit-product-guide.pdf"
+          },
+          {
+              "label": "LIT terms",
+              "url": "https://www.au.bank.in/lit-terms-and-conditions"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "Reward points",
+      "id": "indusind-legend",
+      "name": "IndusInd Bank Legend Credit Card",
+      "shortName": "IndusInd Legend",
+      "bank": "IndusInd Bank",
+      "network": "Visa / Mastercard",
+      "tagline": "Fuel · movies · dining",
+      "bestFor": "Fuel & movies",
+      "accent": "#b45309",
+      "gradient": "linear-gradient(160deg, #78350f 0%, #0f172a 50%, #fcd34d 130%)",
+      "joiningFee": "₹0 / offer*",
+      "annualFee": "See IndusInd",
+      "waiver": "See IndusInd",
+      "feeHint": "*Popular IndusInd lifestyle card. Confirm petrol/diesel surcharge waiver & movie offers.",
+      "offers": [
+          {
+              "title": "Petrol, diesel / fuel / movies / dining",
+              "rate": "Boosted",
+              "rateValue": 3,
+              "capLabel": "See bank",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "IndusInd Legend",
+              "url": "https://www.indusind.com/in/en/personal/cards/credit-card/legend-credit-card.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "std-chartered-smart",
+      "name": "Standard Chartered Smart Credit Card",
+      "shortName": "StanChart Smart",
+      "bank": "Standard Chartered",
+      "network": "Visa / Mastercard",
+      "tagline": "Cashback on everyday spends",
+      "bestFor": "Everyday cashback",
+      "accent": "#0284c7",
+      "gradient": "linear-gradient(160deg, #0c4a6e 0%, #0f172a 50%, #7dd3fc 130%)",
+      "joiningFee": "₹0 / offer*",
+      "annualFee": "See SC",
+      "waiver": "See SC",
+      "feeHint": "*Confirm current cashback % and caps on Standard Chartered India site.",
+      "offers": [
+          {
+              "title": "Online / select categories",
+              "rate": "~2–5%",
+              "rateValue": 2,
+              "capLabel": "Caps apply",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "See SC",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "SC Smart card",
+              "url": "https://www.sc.com/in/credit-cards/smart-credit-card/"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ value",
+      "id": "indianoil-axis",
+      "name": "IndianOil Axis Bank Credit Card",
+      "shortName": "IndianOil Axis",
+      "bank": "Axis Bank",
+      "network": "Visa / Mastercard",
+      "tagline": "IOCL petrol & diesel + EDGE rewards",
+      "bestFor": "Petrol / IOCL",
+      "accent": "#c2410c",
+      "gradient": "linear-gradient(160deg, #7c2d12 0%, #0f172a 50%, #fb923c 130%)",
+      "joiningFee": "See Axis*",
+      "annualFee": "See Axis*",
+      "waiver": "See Axis",
+      "feeHint": "*Confirm current fee, XTRAPOWER / fuel rewards & surcharge waiver on Axis page.",
+      "offers": [
+          {
+              "title": "IndianOil petrol / diesel",
+              "rate": "≈4%*",
+              "rateValue": 4,
+              "capLabel": "XTRAPOWER + 1% surcharge*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "high",
+              "merchants": [
+                  "indianoil",
+                  "iocl",
+                  "petrol",
+                  "fuel",
+                  "diesel"
+              ],
+              "hint": "*EDGE / XTRAPOWER value + fuel surcharge waiver at IOCL — confirm Axis T&Cs"
+          },
+          {
+              "title": "Other retail spends",
+              "rate": "~1.5%*",
+              "rateValue": 1.5,
+              "capLabel": "EDGE points",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "mid",
+              "hint": "*Approx. cash-equivalent; depends on EDGE redemption"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%*",
+              "rateValue": 1,
+              "capLabel": "EDGE points",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "hint": "*Approx. cash-equivalent"
+          }
+      ],
+      "sources": [
+          {
+              "label": "IndianOil Axis Card",
+              "url": "https://www.axisbank.com/retail/cards/credit-card/indian-oil-axis-bank-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "cashback",
+      "id": "hpcl-icici",
+      "name": "ICICI Bank HPCL Super Saver Credit Card",
+      "shortName": "HPCL ICICI Super Saver",
+      "bank": "ICICI Bank",
+      "network": "Visa / RuPay",
+      "tagline": "Up to ~5% at HPCL pumps",
+      "bestFor": "Petrol / HPCL",
+      "accent": "#b91c1c",
+      "gradient": "linear-gradient(160deg, #7f1d1d 0%, #0f172a 50%, #f87171 130%)",
+      "joiningFee": "₹500 + GST",
+      "annualFee": "₹500 + GST",
+      "waiver": "See ICICI",
+      "feeHint": "Fuel savings ≈ 4% cashback + 1% surcharge waiver at HPCL / HP Pay. Extra Happy Coins possible via HP Pay.",
+      "offers": [
+          {
+              "title": "HPCL petrol / diesel (pump or HP Pay)",
+              "rate": "Up to ~5%",
+              "rateValue": 5,
+              "capLabel": "₹200 CB / month*",
+              "capAmount": 200,
+              "capPeriod": "month",
+              "tier": "high",
+              "hint": "*4% cashback cap often ₹200/month + 1% surcharge waiver on eligible txns"
+          },
+          {
+              "title": "Utilities / grocery partners",
+              "rate": "Boosted",
+              "rateValue": 2,
+              "capLabel": "See ICICI",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "See ICICI",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "ICICI HPCL Super Saver",
+              "url": "https://www.icici.bank.in/personal-banking/cards/credit-card/hpcl-super-saver"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "Reward points",
+      "id": "irctc-sbi",
+      "name": "IRCTC SBI Platinum Credit Card",
+      "shortName": "IRCTC SBI",
+      "bank": "SBI Card",
+      "network": "RuPay / Visa",
+      "tagline": "Best for IRCTC train tickets",
+      "bestFor": "IRCTC / trains",
+      "accent": "#1d4ed8",
+      "gradient": "linear-gradient(160deg, #1e3a8a 0%, #0f172a 50%, #93c5fd 130%)",
+      "joiningFee": "₹500 + GST*",
+      "annualFee": "₹500 + GST*",
+      "waiver": "See SBI",
+      "feeHint": "*Confirm Platinum vs Premier variant & current RP on IRCTC tickets.",
+      "offers": [
+          {
+              "title": "IRCTC train tickets",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "RP on tickets",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Dining / travel partners",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "See SBI",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~0.25–1%",
+              "rateValue": 0.5,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "IRCTC SBI Platinum",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/irctc-sbi-platinum-card.html"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "EDGE Rewards",
+      "id": "magnifi-axis",
+      "name": "Axis Bank Magnifi Credit Card",
+      "shortName": "Axis Magnifi",
+      "bank": "Axis Bank",
+      "network": "Visa",
+      "tagline": "Fashion · beauty · Nykaa-style spends",
+      "bestFor": "Nykaa / fashion",
+      "accent": "#db2777",
+      "gradient": "linear-gradient(160deg, #9d174d 0%, #0f172a 50%, #f9a8d4 130%)",
+      "joiningFee": "₹0 / offer*",
+      "annualFee": "See Axis",
+      "waiver": "See Axis",
+      "feeHint": "*Lifestyle / fashion positioning. Confirm current partner list (Nykaa, Myntra, etc.).",
+      "offers": [
+          {
+              "title": "Nykaa / fashion & beauty partners",
+              "rate": "Boosted",
+              "rateValue": 4,
+              "capLabel": "See Axis",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Online shopping",
+              "rate": "~2%",
+              "rateValue": 2,
+              "capLabel": "EDGE",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1%",
+              "rateValue": 1,
+              "capLabel": "EDGE",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "Axis Magnifi",
+              "url": "https://www.axisbank.com/retail/cards/credit-card/magnifi-credit-card"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "Reward points",
+      "id": "hdfc-diners-black",
+      "name": "HDFC Diners Club Black Credit Card",
+      "shortName": "HDFC Diners Black",
+      "bank": "HDFC Bank",
+      "network": "Diners Club",
+      "tagline": "Premium travel · SmartBuy monster",
+      "bestFor": "Premium travel",
+      "accent": "#171717",
+      "gradient": "linear-gradient(160deg, #0a0a0a 0%, #1c1917 55%, #a8a29e 130%)",
+      "joiningFee": "₹10,000 + GST*",
+      "annualFee": "₹10,000 + GST*",
+      "waiver": "High spend*",
+      "feeHint": "*Invite / high income card. Value is via SmartBuy & transfers — confirm eligibility.",
+      "offers": [
+          {
+              "title": "SmartBuy / travel portal",
+              "rate": "Boosted",
+              "rateValue": 10,
+              "capLabel": "See HDFC",
+              "capAmount": null,
+              "tier": "high"
+          },
+          {
+              "title": "Dining / international",
+              "rate": "Boosted",
+              "rateValue": 5,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "mid"
+          },
+          {
+              "title": "Other spends",
+              "rate": "~1–2%",
+              "rateValue": 1.5,
+              "capLabel": "RP",
+              "capAmount": null,
+              "tier": "base"
+          }
+      ],
+      "sources": [
+          {
+              "label": "HDFC Diners Black",
+              "url": "https://www.hdfcbank.com/personal/pay/cards/credit-cards/diners-club-black-metal-edition"
+          }
+      ]
+  }),
+  card({
+      "group": "popular",
+      "earnLabel": "≈ cash (RP @ ₹0.25)",
+      "id": "reliance-sbi-prime",
+      "name": "Reliance SBI Card PRIME",
+      "shortName": "Reliance SBI Prime",
+      "bank": "SBI Card",
+      "network": "RuPay",
+      "tagline": "Reliance Retail stores · Digital · Trends · Ajio",
+      "bestFor": "Reliance ecosystem",
+      "accent": "#c2410c",
+      "gradient": "linear-gradient(160deg, #7c2d12 0%, #0f172a 50%, #fb923c 130%)",
+      "joiningFee": "See SBI Card*",
+      "annualFee": "₹2,999 + GST*",
+      "waiver": "₹3L annual spend*",
+      "feeHint": "*Confirm current fee/waiver on sbicard.com. Earn is stronger at participating Reliance Retail formats — not at unrelated fashion brands (e.g. Zara / Pantaloons).",
+      "offers": [
+          {
+              "title": "Reliance Digital / participating Reliance Retail stores",
+              "rate": "~2.5%",
+              "rateValue": 2.5,
+              "capLabel": "10 RP / ₹100 · excl. UPI*",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "high",
+              "merchants": [
+                  "reliance-digital",
+                  "reliance-retail",
+                  "my-jio",
+                  "jiomart-digital"
+              ],
+              "hint": "*10 RP per ₹100 at participating Reliance Retail (incl. Digital); ~₹0.25/RP. UPI usually lower. Seasonal Instant Discount EMI offers are separate — confirm current T&Cs."
+          },
+          {
+              "title": "Reliance Trends (apparel & footwear)",
+              "rate": "10%",
+              "rateValue": 10,
+              "capLabel": "₹750 / month*",
+              "capAmount": 750,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "reliance-trends"
+              ],
+              "hint": "*Instant discount offer on Trends apparel/footwear — confirm current Partner Offers on sbicard.com. Not Pantaloons / Zara / Lifestyle."
+          },
+          {
+              "title": "AJIO",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹1,000 / month*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "high",
+              "merchants": [
+                  "ajio"
+              ],
+              "hint": "*Order value rules apply (often ₹2,999+). Confirm current Partner Offers."
+          },
+          {
+              "title": "JioMart (Reliance-sold merchandise)",
+              "rate": "5%",
+              "rateValue": 5,
+              "capLabel": "₹1,000 / month*",
+              "capAmount": 1000,
+              "capPeriod": "month",
+              "tier": "mid",
+              "merchants": [
+                  "jiomart"
+              ],
+              "hint": "*Wallet cashback on eligible Reliance-sold categories — not all third-party sellers."
+          },
+          {
+              "title": "Dining / movies / entertainment",
+              "rate": "~1.25%",
+              "rateValue": 1.25,
+              "capLabel": "5 RP / ₹100",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "mid",
+              "merchants": [
+                  "dining",
+                  "movies"
+              ],
+              "hint": "5 RP per ₹100 (~₹0.25/RP)."
+          },
+          {
+              "title": "Other retail spends",
+              "rate": "~0.5%",
+              "rateValue": 0.5,
+              "capLabel": "2 RP / ₹100",
+              "capAmount": null,
+              "noCap": true,
+              "tier": "base",
+              "hint": "Excludes typical fuel / rent / wallet loads — confirm MITC."
+          }
+      ],
+      "sources": [
+          {
+              "label": "Reliance SBI Card PRIME",
+              "url": "https://www.sbicard.com/en/personal/credit-cards/reliance-sbi-card-prime.html"
+          }
+      ]
+  }),
+];
+
+window.CARDWISE_byId = function (id) {
+  return (window.CARDWISE_CARDS || []).find((c) => c.id === id) || null;
+};
